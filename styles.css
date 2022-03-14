@@ -1,0 +1,24 @@
+html{
+  font-size: 1.1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+input {
+  font-size: 1.1rem;
+  width: 90%;
+  padding: 0.4rem;
+  margin: 0.2rem;
+  box-sizing: border-box;
+}
+.slideinMenu{
+  background-color: white;
+  position:absolute;
+  
+  top:-500px;
+  max-width: 900px;
+  transition: top 1s;
+  border-radius: 1rem;
+  /* box-shadow: 5px 2px 2px grey; */
+}
+.slideinMenu.show{
+  top: 100px;
+}

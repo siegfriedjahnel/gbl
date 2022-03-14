@@ -1,0 +1,57 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gbl</title>
+<meta name="author" content="name">
+<meta name="description" content="description here">
+<meta name="keywords" content="keywords,here">
+<link rel="shortcut icon" href="favicon.ico" >
+<link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body>
+    <form id = "frmSignIn" class="slideinMenu">
+      <input type="text" name="name" placeholder="Name"><br>
+      <input type="email" name="email" placeholder="your@email.de"><br>
+      <input type="password" name="pw" placeholder="password"><br>
+      <input type="submit" value ="signUp">
+    </form>
+
+
+<form id = "frmLogIn" class="slideinMenu">
+  <input type="email" name="email" placeholder="your@email.de"><br>
+  <input type="password" name="pw" placeholder="password"><br>
+  <input type="submit" value ="logIn">
+</form>
+
+<p>
+  
+
+</p>
+
+<form id = "frmEntry" class="slideinMenu">
+  <input type="number" name="dd" placeholder="tt">
+  <input type="number" name="mm" placeholder="mm"><br>
+  <input type="text" name="text" placeholder="text"><br>
+  <input type="submit" value ="speichern">
+  <input type="reset" value ="abbrechen">
+</form>
+
+</body>
+<div id="header" class="header">
+  <span id="lblUsername"></span>
+  <button id = btnLogout>logout</button>
+  <button id = btnLogin>login</button>
+  <button id = btnSignin>signin</button>
+  <button id = btnNewEntry>neuer Eintrag</button>
+
+</div>
+<div id="output">
+  <table id="tblList">
+
+  </table>
+</div>
+</body>
+<script src="app.js"></script>
+</html>
