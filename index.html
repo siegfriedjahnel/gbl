@@ -11,18 +11,20 @@
 <link rel="stylesheet" href="styles.css" type="text/css">
 </head>
 <body>
-    <form id = "frmSignIn" class="slideinMenu">
+    <form id = "frmSignIn" class="slideinForm">
       <input type="text" name="name" placeholder="Name"><br>
       <input type="email" name="email" placeholder="your@email.de"><br>
       <input type="password" name="pw" placeholder="password"><br>
       <input type="submit" value ="signUp">
+      <input type="reset" value ="abbrechen">
     </form>
 
 
-<form id = "frmLogIn" class="slideinMenu">
+<form id = "frmLogIn" class="slideinForm">
   <input type="email" name="email" placeholder="your@email.de"><br>
   <input type="password" name="pw" placeholder="password"><br>
   <input type="submit" value ="logIn">
+  <input type="reset" value ="abbrechen">
 </form>
 
 <p>
@@ -30,21 +32,24 @@
 
 </p>
 
-<form id = "frmEntry" class="slideinMenu">
-  <input type="number" name="dd" placeholder="tt">
-  <input type="number" name="mm" placeholder="mm"><br>
-  <input type="text" name="text" placeholder="text"><br>
+<form id = "frmEntry" class="slideinForm">
+  <input type="text" name="dd" placeholder="Tag 2-stellig" minlength="2" maxlength="2" required>
+  <input type="number" name="mm" placeholder="Monat 2-stellig" minlength="2" maxlength="2" required><br>
+  <input type="text" name="text" placeholder="text" required><br>
   <input type="submit" value ="speichern">
   <input type="reset" value ="abbrechen">
 </form>
 
 </body>
+<button id = btnNewEntry class="fab">+</button>
+
 <div id="header" class="header">
   <span id="lblUsername"></span>
   <button id = btnLogout>logout</button>
   <button id = btnLogin>login</button>
   <button id = btnSignin>signin</button>
-  <button id = btnNewEntry>neuer Eintrag</button>
+  <button id = btnMenu onclick="showMenu()"><img src="icons/menu_12.png"></button>
+  
 
 </div>
 <div id="output">

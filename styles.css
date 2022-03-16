@@ -1,24 +1,85 @@
-html{
-  font-size: 1.1rem;
+
+:root {
+--primary : #ffa000;
+--primary-light: #ffd149;
+--primary-dark: #c67100;
+--secondary: #e0e0e0;
+--secondary-light: #ffffff;
+--secondary-dark: #aeaeae;
+}
+
+
+* { margin: 0;
+   padding: 0 }
+body{
+  background-color: var(--primary);
+  margin: 0px;
+  padding:0px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-input {
-  font-size: 1.1rem;
-  width: 90%;
-  padding: 0.4rem;
-  margin: 0.2rem;
-  box-sizing: border-box;
+.header{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: var(--primary-dark);
+  padding: 1rem;
+  display:flex;
+  justify-content: space-between;
+
 }
-.slideinMenu{
+table{
+  width: 98%;
+  margin: 0.2rem;
+  margin-top: 2rem;
+  background-color: var(--secondary-dark);
+}
+tr, td{
+  margin: 0.1rem;
+  padding: 0.1rem;
+  background-color: var(--secondary);
+}
+input {
+  width: 85%;
+  padding: 0.4rem;
+  margin: 1rem;
+  padding: 0,4rem;
+  /* box-sizing: border-box; */
+}
+button{
+  background-color: var(--secondary);
+  padding: .2rem;
+  margin: .1rem;
+  border-style: none;
+  border-radius: 0.6rem;
+}
+.slideinForm{
   background-color: white;
   position:absolute;
-  
+  margin-left: 1rem;;
+  width: 90%;
   top:-500px;
   max-width: 900px;
   transition: top 1s;
   border-radius: 1rem;
   /* box-shadow: 5px 2px 2px grey; */
 }
-.slideinMenu.show{
+.slideinForm.show{
   top: 100px;
+}#lblUsername{
+  padding: 1rem;
+  font-weight: 700;
+
+}
+.fab{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color: var(--primary-dark);
+	border-radius:50px;
+	text-align:center;
+  border:none;
+  font-size:20pt;
+  
+
 }
