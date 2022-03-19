@@ -12,9 +12,13 @@ const btnLogin = document.getElementById("btnLogin");
 const btnSignin = document.getElementById("btnSignin");
 const btnNewEntry = document.getElementById("btnNewEntry");
 const lblUsername = document.getElementById("lblUsername");
+const textField = document.getElementById("textField");
+const btnHelp = document.getElementById("btnHelp");
+const btnQr = document.getElementById("btnQr");
+const btnShare = document.getElementById("btnShare");
 
 
-
+//--------------Event-Listener-------------------
 frmSignIn.addEventListener("submit",function(ev){
   ev.preventDefault();
   createUser();
@@ -62,6 +66,10 @@ btnNewEntry.addEventListener("click", function(ev){
   showEntryForm();
 })
 
+btnHelp.addEventListener("click", function(ev){
+  showHelp();
+})
+//-----------------End of Event-Listener------------------------------------
 
 function toggleMenu(){
   menu.classList.toggle('show');
@@ -91,7 +99,11 @@ function hideSignInForm(){
   frmSignIn.classList.remove('show');
 }
 
-
+function showHelp(){
+  tblList.innerHTML="";
+  textField.innerHTML = help;
+  toggleMenu();
+}
 
 
 async function createUser(){
@@ -188,6 +200,7 @@ async function init(){
   if(localStorage.getItem('username')){
     //user IS logged in-----------------------------
     lblUsername.innerHTML=localStorage.getItem('username');
+    textField.innerHTML="";
     btnLogout.style.display = "inline";
     btnLogin.style.display = "none";
     btnSignin.style.display = "none";
@@ -202,6 +215,7 @@ async function init(){
     btnLogin.style.display = "inline";
     btnSignin.style.display = "inline";
     btnNewEntry.style.display ="none";
+    textField.innerHTML = help;
     tblList.innerHTML = "";
     //-------------------------------------------------------
   }

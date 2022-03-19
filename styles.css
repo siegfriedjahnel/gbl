@@ -76,7 +76,10 @@ button{
 }
 .slideinForm.show{
   top: 100px;
-}#lblUsername{
+}
+
+
+#lblUsername{
   padding: .6rem;
   font-size: 1.2rem;
   font-weight: 700;

@@ -1,15 +1,15 @@
 {
-  "short_name": "dontForget",
-  "name": "dontForget",
+  "short_name": "dontforget",
+  "name": "dont forget",
   "description": "Erinnerungs App",
   "icons": [
     {
-      "src": "icons/splash-192.png",
+      "src": "icons/splash_192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "icons/splash-512.png",
+      "src": "icons/splash_512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
