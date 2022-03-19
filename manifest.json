@@ -1,0 +1,21 @@
+{
+  "short_name": "dontForget",
+  "name": "dontForget",
+  "description": "Erinnerungs App",
+  "icons": [
+    {
+      "src": "icons/splash-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icons/splash-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "index.html",
+  "background_color": "#FFB74D",
+  "display": "standalone",
+  "theme_color": "#E91E63"
+}

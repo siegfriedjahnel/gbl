@@ -1,5 +1,8 @@
+navigator.serviceWorker.register('service-worker.js');
+
 const apiUrl = "https://sj-sam.de/apps/geburtstagsliste/";
 
+const menu = document.getElementById("menu");
 const frmEntry = document.getElementById("frmEntry");
 const frmLogIn = document.getElementById("frmLogIn");
 const frmSignIn = document.getElementById("frmSignIn");
@@ -48,15 +51,21 @@ btnLogin.addEventListener("click", function(ev){
   showLoginForm();
 })
 
+btnMenu.addEventListener("click", function(ev){
+  toggleMenu();
+})
 btnSignin.addEventListener("click", function(ev){
   console.log("hide Form");
   showSignInForm();
 })
 btnNewEntry.addEventListener("click", function(ev){
-  console.log("hide Form");
-  newEntry();
+  showEntryForm();
 })
 
+
+function toggleMenu(){
+  menu.classList.toggle('show');
+}
 
 function showLoginForm(){
   frmLogIn.classList.add('show')
@@ -111,8 +120,15 @@ async function createEntry(){
       body: formData,
       method: "post"
   });
-  await init();
-  frmEntry.reset();
+  const json = await response.json();
+  if(json == "1"){
+    alert("new entry");
+    frmEntry.elements["dd"].value = "";
+    frmEntry.elements["mm"].value = "";
+    frmEntry.elements["text"].value = "";
+    frmEntry.reset();
+    await init();
+  }
 }
 
 async function userLogin(){
@@ -147,7 +163,7 @@ function newEntry(){
 }
 
 async function deleteEntry(id){
-  const route = `${apiUrl}entries.php?action=delete&id=${id}`
+  const route = `${apiUrl}entries.php?action=delete&entryid=${id}`
   const response = await fetch(route);
   const json = await response.json();
   init();
@@ -162,7 +178,7 @@ async function drawEntries(userid){
     let tr = document.createElement('tr');
     tr.innerHTML = `<tr><td>${el.dd}.${el.mm}. 
     </td><td>${el.text}</td> 
-    <td> <button onclick="deleteEntry(${el.id})"><img src="icons/delete_12.png"></button></td></tr> `;
+    <td class="center"> <button onclick="deleteEntry(${el.id})"><img src="icons/delete_12_white.png" alt="delete"></button></td></tr> `;
     tblList.appendChild(tr);
   });
 

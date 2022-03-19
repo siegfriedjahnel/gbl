@@ -1,8 +1,8 @@
 
 :root {
---primary : #ffa000;
---primary-light: #ffd149;
---primary-dark: #c67100;
+--primary : #E91E63;
+--primary-light: #F8BBD0;
+--primary-dark: #C2185B;
 --secondary: #e0e0e0;
 --secondary-light: #ffffff;
 --secondary-dark: #aeaeae;
@@ -26,16 +26,21 @@ body{
   justify-content: space-between;
 
 }
+.menu{
+  padding:1rem;
+  margin: 1rem;
+}
+
 table{
   width: 98%;
   margin: 0.2rem;
   margin-top: 2rem;
-  background-color: var(--secondary-dark);
+  background-color: var(--primary-dark);
 }
 tr, td{
   margin: 0.1rem;
   padding: 0.1rem;
-  background-color: var(--secondary);
+  background-color: var(--primary-light);
 }
 input {
   width: 85%;
@@ -44,12 +49,20 @@ input {
   padding: 0,4rem;
   /* box-sizing: border-box; */
 }
+
 button{
-  background-color: var(--secondary);
+  background-color: var(--primary);
+  color: #ffffff;
   padding: .2rem;
-  margin: .1rem;
   border-style: none;
   border-radius: 0.6rem;
+  font-size: 1.1rem;
+}
+.menuButton{
+  width: 80%;
+  margin: 1rem;
+  
+
 }
 .slideinForm{
   background-color: white;
@@ -60,26 +73,15 @@ button{
   max-width: 900px;
   transition: top 1s;
   border-radius: 1rem;
-  /* box-shadow: 5px 2px 2px grey; */
 }
 .slideinForm.show{
   top: 100px;
 }#lblUsername{
-  padding: 1rem;
+  padding: .6rem;
+  font-size: 1.2rem;
   font-weight: 700;
-
+  color: #ffffff;
 }
-.fab{
-	position:fixed;
-	width:60px;
-	height:60px;
-	bottom:40px;
-	right:40px;
-	background-color: var(--primary-dark);
-	border-radius:50px;
-	text-align:center;
-  border:none;
-  font-size:20pt;
-  
-
+.center{
+  text-align: center;
 }

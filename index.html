@@ -1,55 +1,63 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Gbl</title>
-<meta name="author" content="name">
-<meta name="description" content="description here">
-<meta name="keywords" content="keywords,here">
-<link rel="shortcut icon" href="favicon.ico" >
-<link rel="stylesheet" href="styles.css" type="text/css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Gbl</title>
+  <meta name="author" content="name">
+  <meta name="description" content="description here">
+  <meta name="keywords" content="keywords,here">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css" type="text/css">
 </head>
+
 <body>
-    <form id = "frmSignIn" class="slideinForm">
-      <input type="text" name="name" placeholder="Name"><br>
-      <input type="email" name="email" placeholder="your@email.de"><br>
-      <input type="password" name="pw" placeholder="password"><br>
-      <input type="submit" value ="signUp">
-      <input type="reset" value ="abbrechen">
-    </form>
+  <form id="frmSignIn" class="slideinForm">
+    <input type="text" name="name" placeholder="Name"><br>
+    <input type="email" name="email" placeholder="your@email.de"><br>
+    <input type="password" name="pw" placeholder="password"><br>
+    <input type="submit" value="signUp">
+    <input type="reset" value="abbrechen">
+  </form>
 
 
-<form id = "frmLogIn" class="slideinForm">
-  <input type="email" name="email" placeholder="your@email.de"><br>
-  <input type="password" name="pw" placeholder="password"><br>
-  <input type="submit" value ="logIn">
-  <input type="reset" value ="abbrechen">
-</form>
+  <form id="frmLogIn" class="slideinForm">
+    <input type="email" name="email" placeholder="your@email.de"><br>
+    <input type="password" name="pw" placeholder="password"><br>
+    <input type="submit" value="logIn">
+    <input type="reset" value="abbrechen">
+  </form>
 
-<p>
-  
+  <p>
 
-</p>
 
-<form id = "frmEntry" class="slideinForm">
-  <input type="text" name="dd" placeholder="Tag 2-stellig" minlength="2" maxlength="2" required>
-  <input type="number" name="mm" placeholder="Monat 2-stellig" minlength="2" maxlength="2" required><br>
-  <input type="text" name="text" placeholder="text" required><br>
-  <input type="submit" value ="speichern">
-  <input type="reset" value ="abbrechen">
-</form>
+  </p>
+
+  <form id="frmEntry" class="slideinForm">
+    <input type="number" name="dd" placeholder="Tag 2-stellig" minlength="2" maxlength="2" required>
+    <input type="number" name="mm" placeholder="Monat 2-stellig" minlength="2" maxlength="2" required><br>
+    <input type="text" name="text" placeholder="text" required><br>
+    <input type="submit" value="speichern">
+    <input type="reset" value="abbrechen">
+  </form>
 
 </body>
-<button id = btnNewEntry class="fab">+</button>
+<div id="menu" class="slideinForm menu">
+  <p class="menuList"><button id="btnHelp" class="menuButton"> Hilfe</button></p>
+  <p class="menuList"><button id="btnShare" class="menuButton"> App teilen</button></p>
+  <p class="menuList"><button id="btnQr" class="menuButton"> QR-Code</button></p>
+  <p class="menuList"><button id="btnSignout" class="menuButton"> Dienst beenden</button></p>
+</div>
 
 <div id="header" class="header">
   <span id="lblUsername"></span>
-  <button id = btnLogout>logout</button>
-  <button id = btnLogin>login</button>
-  <button id = btnSignin>signin</button>
-  <button id = btnMenu onclick="showMenu()"><img src="icons/menu_12.png"></button>
-  
+  <button id=btnLogout>logout</button>
+  <button id=btnLogin>login</button>
+  <button id=btnSignin>signin</button>
+  <button id=btnNewEntry>neuer Eintrag</button>
+  <button id=btnMenu ><img src="icons/menu_12_white.png" alt="menu"></button>
+
 
 </div>
 <div id="output">
@@ -59,4 +67,5 @@
 </div>
 </body>
 <script src="app.js"></script>
+
 </html>
