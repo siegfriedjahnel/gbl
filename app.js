@@ -134,7 +134,6 @@ async function createEntry(){
   });
   const json = await response.json();
   if(json == "1"){
-    alert("new entry");
     frmEntry.elements["dd"].value = "";
     frmEntry.elements["mm"].value = "";
     frmEntry.elements["text"].value = "";
@@ -190,7 +189,7 @@ async function drawEntries(userid){
     let tr = document.createElement('tr');
     tr.innerHTML = `<tr><td>${el.dd}.${el.mm}. 
     </td><td>${el.text}</td> 
-    <td class="center"> <button onclick="deleteEntry(${el.id})"><img src="icons/delete_12_white.png" alt="delete"></button></td></tr> `;
+    <td class="center"> <button onclick="deleteEntry(${el.id})"><img src="icons/delete_24_white.png" alt="delete"></button></td></tr> `;
     tblList.appendChild(tr);
   });
 

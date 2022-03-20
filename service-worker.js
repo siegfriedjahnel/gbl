@@ -1,6 +1,6 @@
 self.addEventListener('install', async function () { 
   const cache = await caches.open('static-cache'); 
-  cache.addAll(['styles.css', 'index.html', 'lib/qrcode.min.js']); 
+  cache.addAll(['styles.css', 'index.html', 'libs/qrcode.min.js']); 
 }); 
 
 
