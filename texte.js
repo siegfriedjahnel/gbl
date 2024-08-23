@@ -14,7 +14,7 @@ im Header-Bereich. Solange du dich nicht ausloggst, oder den Browser-Cache lösc
   <p><strong>neuer Eintrag</strong> Hier kannst du neue Termine erstellen. Das Datum muss in folgendem Format sein: 
   "01.05."
 </p><br>
-
+<p>https://siegfriedjahnel.github.io/gbl/</p>
 <p><button onClick="init()">close</button></p>
 </div>
 `;
